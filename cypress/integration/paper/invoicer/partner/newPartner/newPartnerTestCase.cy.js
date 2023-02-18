@@ -24,7 +24,7 @@ class newPartnerTestCase {
 
                   After(() => {
 
-                        cy.url().should('include', '/invoicer/dashboard').then(() => {
+                        cy.url({timeout: 5000}).should('include', '/invoicer/dashboard').then(() => {
 
                               cy.visit('https://paper.id/webappv1/#/invoicer/partner')
                               cy.contains('button', 'Create New Partner').click()
