@@ -16,7 +16,7 @@ class newPartnerTestCase {
 
                   cy.contains('*[data-cy="submit"]', 'Masuk').then((button) => {
                         button.click()
-                  })            
+                  })
             })
 
 
@@ -24,7 +24,7 @@ class newPartnerTestCase {
 
                   After(() => {
 
-                        cy.url().should('include', '/invoicer/dashboard', { timeout: 200000 }).then(() => {
+                        cy.url().should('include', '/invoicer/dashboard').then(() => {
 
                               cy.visit('https://paper.id/webappv1/#/invoicer/partner')
                               cy.contains('button', 'Create New Partner').click()
